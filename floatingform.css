@@ -1,0 +1,82 @@
+
+.input-wrapper {
+    position: relative;
+    margin-top: 30px; 
+    margin-inline: auto;
+    max-width: 400px;
+  }
+  
+  .input {
+    font-size: 14px;
+    width: 100%;
+    padding: 8px 0;
+    padding-right: 30px; 
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    transition: border-color 250ms;
+    background-color: transparent;
+  
+    &:focus {
+      outline: none;
+      border-bottom-color: #777;
+    }
+  
+    &::placeholder {
+      color: transparent;
+    }
+    
+    
+    &::-webkit-contacts-auto-fill-button {
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+    }
+  }
+  
+  .label {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    color: #43454e;
+    pointer-events: none;
+    transform-origin: left center;
+    transition: transform 250ms;
+    font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052,
+      serif;
+  }
+  
+  .input:focus + .label,
+  .input:not(:placeholder-shown) + .label {
+    transform: translateY(-100%) scale(0.75);
+  }
+  
+  .clear {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 50%;
+    right: -9px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    color: #777;
+    transition: color 250ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &:hover,
+    &:focus {
+      color: #333;
+    }
+  }
+  
+  .input:placeholder-shown + .label + .clear {
+    display: none;
+  }
+  

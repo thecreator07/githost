@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --red: #FF3147;
+    --black: #000000;
+    --white: #ffffff;
+    --headingSize: 45px;
+    --subheadingSize: 30px;
+    --ParaSize: 16px;
+    --buttonSize: 14px;
+    --imgwidth: 500px
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto auto;
+    overflow-x: hidden;
+}
+
+section {
+    margin: 10vh 1rem;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    position: relative;
+}
+
+#homepage {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    /* width: 100%; */
+}
+
+#subheading {
+    color: var(--red);
+    font-size: var(--subheadingSize);
+    text-transform: uppercase;
+}
+
+#heading {
+    color: var(--black);
+    font-size: 60px;
+    font-weight: bold;
+    /* font-family: Cormorant SC; */
+    text-transform: uppercase;
+}
+
+.heading {
+    color: var(--black);
+    font-size: var(--headingSize);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Paragraph {
+    color: var(--black);
+    font-size: var(--ParaSize);
+    font-weight: lighter;
+}
+
+#Contact {
+    color: var(--white);
+    font-size: var(--buttonSize);
+    padding: 10px 14px;
+    max-width: fit-content;
+    background-color: var(--red);
+    font-weight: 600;
+    border-color: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.maindiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#PopUp {
+    max-width: 450px;
+    max-height: 330px;
+    position: fixed;
+    /* inset: 20%; */
+    top: 25%;
+    /* left: 25%; */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#PopUp .names {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+#formheading {
+    font-size: 20px;
+}
+
+.checkpara {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+input[type="checkbox"] {
+    transform: translateY(2px);
+}
+
+.check {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: flex-start;
+    /* align-items: flex-start; */
+
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+
+    }
+
+    section {
+        margin: 0vh 0px;
+        padding: 30px 10px;
+        gap: 25px   ;
+    }
+
+    .maindiv {
+        align-items: center;
+    }
+
+    #subheading {
+        font-size: 25px;
+    }
+
+    #Paragraph {
+        text-align: justify;
+    }
+
+    #heading {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .imgclass {
+        display: none;
+    }
+
+    #PopUp {
+        top: 10%;
+    }
+
+}
